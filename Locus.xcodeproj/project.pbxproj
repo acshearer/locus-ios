@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2456E15D0F75B4A049E79AC /* libPods-Locus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6A7DFAAE2BF3DF01BC9501 /* libPods-Locus.a */; };
+		634BFB8959628454AF9D20F2 /* Pods_Locus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFFFCF13B21557164F0FD33E /* Pods_Locus.framework */; };
+		E38FC9631E633DF4000DA2C2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38FC9621E633DF4000DA2C2 /* Event.swift */; };
+		E38FC9661E633FBF000DA2C2 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38FC9651E633FBF000DA2C2 /* EventCell.swift */; };
+		E3B03F051E63088C00A59667 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3B03F041E63088C00A59667 /* UserViewController.swift */; };
 		E3E28A431E62A26C001ADABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E28A421E62A26C001ADABF /* AppDelegate.swift */; };
 		E3E28A451E62A26C001ADABF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E28A441E62A26C001ADABF /* LoginViewController.swift */; };
 		E3E28A481E62A26C001ADABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E28A461E62A26C001ADABF /* Main.storyboard */; };
@@ -19,8 +22,11 @@
 
 /* Begin PBXFileReference section */
 		02593A5108E1894A98BF7C51 /* Pods-Locus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locus.release.xcconfig"; path = "Pods/Target Support Files/Pods-Locus/Pods-Locus.release.xcconfig"; sourceTree = "<group>"; };
-		5C6A7DFAAE2BF3DF01BC9501 /* libPods-Locus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Locus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DCE3D44C398CED9E456DC56 /* Pods-Locus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Locus/Pods-Locus.debug.xcconfig"; sourceTree = "<group>"; };
+		DFFFCF13B21557164F0FD33E /* Pods_Locus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38FC9621E633DF4000DA2C2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E38FC9651E633FBF000DA2C2 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		E3B03F041E63088C00A59667 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		E3E28A3F1E62A26C001ADABF /* Locus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E28A421E62A26C001ADABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3E28A441E62A26C001ADABF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -38,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2456E15D0F75B4A049E79AC /* libPods-Locus.a in Frameworks */,
+				634BFB8959628454AF9D20F2 /* Pods_Locus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +63,45 @@
 		72070A492F1480CA199FD993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5C6A7DFAAE2BF3DF01BC9501 /* libPods-Locus.a */,
+				DFFFCF13B21557164F0FD33E /* Pods_Locus.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E38FC9601E633D7A000DA2C2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3E28A441E62A26C001ADABF /* LoginViewController.swift */,
+				E3B03F041E63088C00A59667 /* UserViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E38FC9611E633DDD000DA2C2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E38FC9621E633DF4000DA2C2 /* Event.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E38FC9641E633FAD000DA2C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E38FC9651E633FBF000DA2C2 /* EventCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E38FC9671E634D9C000DA2C2 /* Helper Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3E28A491E62A26C001ADABF /* Locus.xcdatamodeld */,
+				E3E28A5A1E62A3AC001ADABF /* Locus-Bridging-Header.h */,
+				E3E28A511E62A26C001ADABF /* Info.plist */,
+				E3E28A621E62B155001ADABF /* GoogleService-Info.plist */,
+			);
+			name = "Helper Files";
 			sourceTree = "<group>";
 		};
 		E3E28A361E62A26C001ADABF = {
@@ -83,15 +125,14 @@
 		E3E28A411E62A26C001ADABF /* Locus */ = {
 			isa = PBXGroup;
 			children = (
-				E3E28A621E62B155001ADABF /* GoogleService-Info.plist */,
-				E3E28A511E62A26C001ADABF /* Info.plist */,
+				E3E28A4C1E62A26C001ADABF /* Assets.xcassets */,
+				E38FC9671E634D9C000DA2C2 /* Helper Files */,
+				E38FC9641E633FAD000DA2C2 /* View */,
+				E38FC9611E633DDD000DA2C2 /* Model */,
+				E38FC9601E633D7A000DA2C2 /* Controller */,
 				E3E28A421E62A26C001ADABF /* AppDelegate.swift */,
-				E3E28A441E62A26C001ADABF /* LoginViewController.swift */,
 				E3E28A461E62A26C001ADABF /* Main.storyboard */,
 				E3E28A4E1E62A26C001ADABF /* LaunchScreen.storyboard */,
-				E3E28A4C1E62A26C001ADABF /* Assets.xcassets */,
-				E3E28A491E62A26C001ADABF /* Locus.xcdatamodeld */,
-				E3E28A5A1E62A3AC001ADABF /* Locus-Bridging-Header.h */,
 			);
 			path = Locus;
 			sourceTree = "<group>";
@@ -225,6 +266,9 @@
 				E3E28A451E62A26C001ADABF /* LoginViewController.swift in Sources */,
 				E3E28A4B1E62A26C001ADABF /* Locus.xcdatamodeld in Sources */,
 				E3E28A431E62A26C001ADABF /* AppDelegate.swift in Sources */,
+				E3B03F051E63088C00A59667 /* UserViewController.swift in Sources */,
+				E38FC9661E633FBF000DA2C2 /* EventCell.swift in Sources */,
+				E38FC9631E633DF4000DA2C2 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

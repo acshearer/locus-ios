@@ -9,11 +9,24 @@
 import UIKit
 import Google
 
-class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
+class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
+    
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    @IBOutlet weak var subHeading: UILabel!
+    @IBOutlet weak var Heading: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var background: UIView!
+    @IBOutlet weak var loginSuccess: UILabel!
+    
+    var userEmail = String()
+    var userName = String()
+    var userImage = UIImage()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         var error: NSError?
         GGLContext.sharedInstance().configureWithError(&error)
         
@@ -22,6 +35,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
             return
         }
         
+        
+        continueButton.layer.cornerRadius=8
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
         
@@ -33,10 +48,28 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
             return
         }
         print(user.profile.email)
-        print(user.profile.familyName)
         print(user.profile.name)
         
+        userEmail = user.profile.email
+        userName = user.profile.name
+
+        signInButton.isHidden = true
+        subHeading.isHidden = true
+        Heading.isHidden = true
+        continueButton.isHidden = false
+        loginSuccess.isHidden=false
+        background.backgroundColor=UIColor.gray
+        
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var destination : UserViewController = segue.destination as! UserViewController
+        destination.userEmailText  = userEmail
+        destination.userNameText = userName
+    }
+    
+
 
 
 }
