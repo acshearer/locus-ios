@@ -6,3 +6,4 @@ target 'Locus' do
     pod 'Google/SignIn'
     pod 'Alamofire', '~> 4.3'
 end
+ 
